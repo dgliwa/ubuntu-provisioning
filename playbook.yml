@@ -1,0 +1,47 @@
+---
+- hosts: localhost 
+
+  vars:
+    rbenv_versions:
+      - 2.2.4
+      - 2.2.2
+    applications:
+     # - clipmenu
+      #- google-drive
+      #- intellij-idea
+      #- mongochef
+      #- postman
+      #- rubymine
+      #- screenhero
+    tools:
+      - caffeine
+      #- docker-engine
+      - mongodb
+      # - mysql
+      - nmap
+      - nodejs
+      - openssl
+      - phantomjs
+      - pkg-config
+      - postgresql
+      - python3
+      - sqlite
+      - tig
+      - tmux
+      - vim
+      - virtualbox
+      - vlc
+    dotfiles_dir: /home/dgliwa/dotfiles
+    email: dgliwa7bhs@gmail.com
+    github_username: dgliwa
+    home_dir: /home/dgliwa
+    name: Derek Gliwa
+    zsh_path: /bin/zsh
+
+  tasks:
+    - include: tasks/apt-repos.yml
+      tags: [apt]
+      sudo: yes
+    - include: tasks/apt-install.yml
+      tags: [apt]
+      sudo: yes

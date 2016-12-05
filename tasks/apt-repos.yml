@@ -1,0 +1,10 @@
+- apt_repository:
+    repo: 'deb http://dl.google.com/linux/chrome/deb/ stable main'
+
+- apt_repository:
+    repo: 'ppa:nathan-renniewaldock/flux'
+
+
+- apt_repository:
+    repo: 'ppa:webupd8team/atom'
+
