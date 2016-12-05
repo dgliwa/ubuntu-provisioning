@@ -50,3 +50,7 @@
       tags: [rvm]
     - include: tasks/zsh.yml
       tags: [zsh]
+    - include: tasks/dotfiles.yml
+      tags: [dotfiles]
+    - include: tasks/gitconfig.yml
+      tags: [gitconfig]

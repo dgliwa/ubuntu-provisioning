@@ -5,5 +5,9 @@
 - name: Install slack
   apt:
     deb: https://downloads.slack-edge.com/linux_releases/slack-desktop-2.3.3-amd64.deb
+    state: present
 
-
+- name: Install rcup
+  apt:
+    deb: https://thoughtbot.github.io/rcm/debs/rcm_1.3.0-1_all.deb
+    state: present
