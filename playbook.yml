@@ -31,12 +31,13 @@
       - vim
       - virtualbox
       - vlc
+      - zsh
     dotfiles_dir: /home/dgliwa/dotfiles
     email: dgliwa7bhs@gmail.com
     github_username: dgliwa
     home_dir: /home/dgliwa
     name: Derek Gliwa
-    zsh_path: /bin/zsh
+    zsh_path: /usr/bin/zsh
 
   tasks:
     - include: tasks/apt-repos.yml
@@ -47,3 +48,5 @@
       sudo: yes
     - include: tasks/install-rvm.yml
       tags: [rvm]
+    - include: tasks/zsh.yml
+      tags: [zsh]
