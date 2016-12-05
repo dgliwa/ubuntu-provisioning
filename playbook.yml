@@ -16,6 +16,7 @@
     tools:
       - caffeine
       #- docker-engine
+      - geary
       - mongodb
       # - mysql
       - nmap
