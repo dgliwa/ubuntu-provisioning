@@ -45,3 +45,5 @@
     - include: tasks/apt-install.yml
       tags: [apt]
       sudo: yes
+    - include: tasks/install-rvm.yml
+      tags: [rvm]

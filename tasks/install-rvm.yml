@@ -1,0 +1,22 @@
+---
+- name: Check for rvm installed
+  stat: path=~/.rvm
+  register: rvm_installed
+
+- name: install gpg key
+  shell: gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+  when: rvm_installed.stat.exists == false
+
+- name: Install rvm
+  shell: curl -L get.rvm.io | bash -s stable
+  when: rvm_installed.stat.exists == false
+  ignore_errors: yes
+
+- name: Install ruby versions using rvm
+  shell: source ~/.profile; rvm install ruby-2.3.0
+
+- name: Set default ruby
+  shell: rvm use --default ruby-2.3.0
+
+- name: Install bundler
+  shell: gem install bundler
