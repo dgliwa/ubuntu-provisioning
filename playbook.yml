@@ -1,26 +1,17 @@
 ---
-- hosts: localhost 
+- hosts: localhost
 
   vars:
-    rbenv_versions:
-      - 2.2.4
-      - 2.2.2
-    applications:
-     # - clipmenu
-      #- google-drive
-      #- intellij-idea
-      #- mongochef
-      #- postman
-      #- rubymine
-      #- screenhero
     tools:
       - caffeine
       #- docker-engine
       - geary
+      - default-jdk
+      - libpq-dev
       - mongodb
-      # - mysql
       - nmap
       - nodejs
+      - npm
       - openssl
       - phantomjs
       - pkg-config
