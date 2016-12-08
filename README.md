@@ -20,4 +20,8 @@ cd ./local-provisioning
 ansible-playbook playbook.yml
 ```
 
-That should be it!
+You will need to do a restart for you changes to the shell to take place, then come back to this directory and run:
+
+```
+ansible-playbook finish-playbook.yml
+```

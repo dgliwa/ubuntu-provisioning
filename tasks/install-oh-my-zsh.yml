@@ -1,0 +1,7 @@
+- name: Check oh-my-zsh is installed
+  stat: path={{ home_dir}}/.oh-my-zsh
+  register: oh_my_zsh_installed
+
+- name: Install oh-my-zsh
+  shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  when: oh_my_zsh_installed.stat.exists == false

@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+
+  vars:
+    home_dir: /home/dgliwa
+    zsh_path: /usr/bin/zsh
+
+  tasks:
+    - include: tasks/install-oh-my-zsh.yml
+      tags: [ohmyzsh]
