@@ -5,6 +5,7 @@
     tools:
       - caffeine
       - geary
+      - gparted
       - default-jdk
       - libpq-dev
       - mongodb
