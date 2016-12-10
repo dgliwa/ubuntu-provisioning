@@ -3,6 +3,7 @@
 
   vars:
     tools:
+      - atom
       - caffeine
       - geary
       - gparted
