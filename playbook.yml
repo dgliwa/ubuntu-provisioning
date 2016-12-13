@@ -21,6 +21,7 @@
       - sqlite
       - tig
       - tmux
+      - unetbootin
       - vim
       - virtualbox
       - vlc
